@@ -14,8 +14,6 @@ alias gap='git add -p'
 alias vim='mvim -v'
 alias vbp='vim ~/.bash_profile && source ~/.bash_profile'
 
-alias dev='source ~/jetstar/adadev.sh'
-
 alias la='ls -la'
 
 alias p3i='pip3 install'

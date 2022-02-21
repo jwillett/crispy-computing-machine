@@ -8,13 +8,15 @@ alias gpr='git pull --rebase'
 alias glo='git log'
 alias gfe='git fetch'
 alias gcm='git commit -m'
-alias gca='git commit --amend'
+alias gca='git commit --amend --no-edit'
 alias gbr='git branch'
 alias gbd='git branch -d'
 alias gdi='git diff'
+alias gdis='git diff --staged'
 alias gap='git add -p'
 alias gpo='git push -u origin'
 alias grom='git rebase origin/master'
+alias gfrom='git fetch && git rebase origin/master'
 alias gcom='git checkout master'
 
 alias vim='mvim -v'
@@ -27,20 +29,12 @@ alias p3i='pip3 install'
 
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
-export PATH="$HOME/.poetry/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
 alias nve="python3 -m venv .venv && . ./.venv/bin/activate"
 alias ave=". ./.venv/bin/activate"
 alias dve="deactivate"
 
-alias dpi="pip install pip==18.1"
 alias pins="poetry install"
 alias pupd="poetry update"
-alias mra="make run_app"
 alias dps="docker ps"
 
 alias kcl="kubectl"
@@ -68,6 +62,9 @@ alias klo="kubectl logs"
 alias kcx="kubectl config use-context"
 alias kcgx="kubectl config get-contexts"
 
-export PATH="/usr/local/opt/ruby/bin:$PATH"
+alias yfo="yarn format"
+alias yli="yarn lint"
+alias yte="yarn test"
+alias yaf="yarn autofmt"
 
-export PATH="/usr/local/opt/python@3.8/bin:$PATH"
+alias ppj="python -m json.tool"
